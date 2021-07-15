@@ -7,6 +7,8 @@ class Integer
       units(numbers.first, 'I', 'V', 'X')
     when 2
       units(numbers[1], 'X', 'L', 'C') + units(numbers[0], 'I', 'V', 'X')
+    when 3
+      units(numbers[1], 'M', '', '') + units(numbers[1], 'X', 'L', 'C') + units(numbers[0], 'I', 'V', 'X')
     end
   end
 
@@ -30,6 +32,8 @@ class Integer
       half + unit * 3
     when 9
       unit + full
+    else
+      ''
     end
   end
 end
